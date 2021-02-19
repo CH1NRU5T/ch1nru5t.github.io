@@ -1,37 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <link rel="icon" href="images/kira.png" type="png">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entangled</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        .nav img {
-            width: 60px;
-            height: 60px;
-            float: left;
-            border-radius: 5px;
-            margin: 5px 10px;
-        }
-    </style>
-</head>
-
-<body style="margin: 0;">
-    <div class="nav">
-        <a id="download" href="htmls/download.html">Download</a>
-        <img src="images/kira.png" alt="kira">
-        <a href="#">Home</a>
-        <a href="htmls/about.html">About</a>
-        <a href="htmls/team.html">Team</a>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Cube</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/web.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Cube</div>
+      </div>
     </div>
-    <div class="container">
-
-    </div>
-</body>
-
+  </body>
 </html>
