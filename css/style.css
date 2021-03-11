@@ -85,11 +85,34 @@ body{
     border-radius: 2px;
 }
 .skill{
-    width: 25em;
+    width: 25.37em;
     height: 25em;
     background-color: coral;
     border-radius: 50%;
     display: inline-block;
     overflow: hidden;
-    margin: 0em 0.5em;
+    margin: 1.5em 0.5em;
+}
+.skill:hover{
+    animation: popbox 0.3s forwards;
+}
+.skill:hover > .sk{
+    animation: bleh 0.4s forwards;
+}
+.skill:hover  .fillcube{
+    animation: barfill-40 1s forwards;
+}
+.pbarcube{
+    margin:0em auto;
+    width: 70%;
+    height: 2em;
+    border:1px solid black;
+}
+.fillcube{
+    width: 0%;
+    height: 2em;
+    background-color: white;
+}
+#skill1 a{
+    
 }
