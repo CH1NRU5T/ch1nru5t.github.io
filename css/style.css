@@ -113,6 +113,93 @@ body{
     height: 2em;
     background-color: white;
 }
-#skill1 a{
-    
+.htmlbar{
+    margin: 0em auto;
+    width: 70%;
+    height: 2em;
+    border:1px solid black;
+}
+.fillhtml{
+    width: 0%;
+    height: 2em;
+    background-color: white;
+    border-radius: 5px;
+}
+.skill:hover  .fillhtml{
+    animation: barfill-90 1s forwards;
+}
+.cssbar{
+    margin: 0em auto;
+    width: 70%;
+    height: 2em;
+    border:1px solid black;
+}
+.fillcss{
+    width: 0%;
+    height: 2em;
+    background-color: white;
+    border-radius: 5px;
+}
+.skill:hover  .fillcss{
+    animation: barfill-60 1s forwards;
+}
+.jsbar{
+    margin: 0em auto;
+    width: 70%;
+    height: 2em;
+    border:1px solid black;
+}
+.filljs{
+    width: 0%;
+    height: 2em;
+    background-color: white;
+    border-radius: 5px;
+}
+.skill:hover  .filljs{
+    animation: barfill-5 1s forwards;
+}
+.cbar{
+    margin: 0em auto;
+    width: 70%;
+    height: 2em;
+    border:1px solid black;
+}
+.fillc{
+    width: 0%;
+    height: 2em;
+    background-color: white;
+    border-radius: 5px;
+}
+.skill:hover  .fillc{
+    animation: barfill-95 1s forwards;
+}
+.cppbar{
+    margin: 0em auto;
+    width: 70%;
+    height: 2em;
+    border:1px solid black;
+}
+.fillcpp{
+    width: 0%;
+    height: 2em;
+    background-color: white;
+    border-radius: 5px;
+}
+.skill:hover  .fillcpp{
+    animation: barfill-30 1s forwards;
+}
+.javabar{
+    margin: 0em auto;
+    width: 70%;
+    height: 2em;
+    border:1px solid black;
+}
+.filljava{
+    width: 0%;
+    height: 2em;
+    background-color: white;
+    border-radius: 5px;
+}
+.skill:hover  .filljava{
+    animation: barfill-35 1s forwards;
 }

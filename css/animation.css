@@ -31,3 +31,51 @@
         width: 40%;
     }
 }
+@keyframes barfill-90{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 90%;
+    }
+}
+@keyframes barfill-60{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 60%;
+    }
+}
+@keyframes barfill-5{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 5%;
+    }
+}
+@keyframes barfill-95{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 95%;
+    }
+}
+@keyframes barfill-30{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 30%;
+    }
+}
+@keyframes barfill-35{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 35%;
+    }
+}
