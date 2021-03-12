@@ -88,11 +88,11 @@ body{
     width: 25.37em;
     height: 25em;
     /* background-color: rgba(255, 127, 80, 0.342); */
-    background-color: rgba(255, 127, 80, 0.247);
+    background-color: rgba(255, 127, 80, 0.363);
     border-radius: 50%;
     display: inline-block;
     overflow: hidden;
-    /* margin: 0em 0.5em; */
+    margin: 0em 0.5em;
     position: relative;
 }
 .skill:hover{ /*on hover div element bada hoga*/
@@ -205,42 +205,45 @@ body{
 .skill:hover  .filljava{
     animation: barfill-35 1s forwards;
 }
-.outerfade-gamedev{
+#outerfade-gamedev{
     width: 15%;
     height: 25em;
-    background-color: rgba(255, 127, 80, 0.342);
-    border-radius: 50%;
+    /* background-color: rgba(255, 127, 80, 0.342); */
+    border-radius: 0%;
     display: inline-block;
     overflow: hidden;
     margin: -25.3em 0em;
     position: absolute;
 }
-.skill:hover .outerfade-gamedev{
+.skill:hover #outerfade-gamedev{
     animation: popbox1 0.3s forwards;
 }
-.outerfade-webdev{
+#outerfade-webdev{
     width: 55%;
     height: 25em;
-    background-color: rgba(255, 127, 80, 0.342);
+    /* background-color: rgba(255, 127, 80, 0.342); */
     border-radius: 0%;
     display: inline-block;
     overflow: hidden;
     margin: -25.3em 0em;
     position: absolute;
 }
-.skill:hover .outerfade-webdev{
+.skill:hover #outerfade-webdev{
     animation: popbox1 0.3s forwards;
 }
-.outerfade-programming{
+#outerfade-programming{
     width: 70%;
     height: 25em;
-    background-color: rgba(255, 127, 80, 0.342);
+    /* background-color: rgba(255, 127, 80, 0.342); */
     border-radius: 0%;
     display: inline-block;
     overflow: hidden;
     margin: -25.3em 0em;
     position: absolute;
 }
-.skill:hover .outerfade-programming{
+.skill:hover #outerfade-programming{
     animation: popbox1 0.3s forwards;
+}
+.outerfade{
+    background-color: rgba(255, 127, 80, 0.342);
 }

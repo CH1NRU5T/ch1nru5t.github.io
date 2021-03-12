@@ -16,10 +16,12 @@
 @keyframes popbox1{
     from{
         height: 25em;
+        opacity: 0;
         }
     
     to{
         height: 50em;
+        opacity: 0;
     }
 }
 @keyframes bleh{
