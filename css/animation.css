@@ -10,7 +10,7 @@
     
     to{
         height: 34em;
-        border-radius: 10%;
+        border-radius: 5%;
     }
 }
 @keyframes popbox1{
@@ -88,5 +88,45 @@
     }
     to{
         width: 35%;
+    }
+}
+@keyframes contactzoom{
+    from{
+        width: 20em;
+        height: 3em;
+    }
+    to{
+        width: 20.2em;
+        height: 3.5em;
+    }
+}
+@keyframes handle-down{
+    from{margin-top: 0.15em}
+    to{margin-top: 0.3em;}
+}
+@keyframes contact-barfill-black{
+    from{
+        background-color: rgba(255, 255, 255, 0.644);
+    /* color: black; */
+}
+    to{
+        background-color: black;
+        /* color: rgba(255, 255, 255, 0.644); */
+    }
+}
+@keyframes handle-color-change{
+    from{
+        color: black;
+    }
+    to{
+        color: white;
+    }
+}
+@keyframes full-barfill{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 79.5%;
     }
 }
