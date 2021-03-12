@@ -13,6 +13,15 @@
         border-radius: 10%;
     }
 }
+@keyframes popbox1{
+    from{
+        height: 25em;
+        }
+    
+    to{
+        height: 50em;
+    }
+}
 @keyframes bleh{
     from{
         margin-top: 5.7em;
