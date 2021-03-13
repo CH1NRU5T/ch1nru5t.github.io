@@ -283,7 +283,7 @@ body{
 }
 .socialmedia:hover .fillcontact{
     /* animation:  contact-barfill-black 0.5s forwards; */
-    animation: full-barfill 0.5s forwards;
+    /* animation: full-barfill 0.5s forwards; */
 }
 .socialmedia:hover h1{
     animation:  handle-color-change 0.5s forwards;
@@ -297,4 +297,16 @@ body{
     border-radius: 0.5em;
     width: 0%;          
     height: 100%;
+}
+#fillmail{
+    opacity: 0;
+}
+#mail:hover #fillmail{
+    bottom: -6em;
+    z-index: 100;
+    overflow: hidden;
+    transition: 0.5s;
+    width: 25em;
+    height: 20em;
+    opacity: 1;
 }
