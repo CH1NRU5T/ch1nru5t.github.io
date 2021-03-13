@@ -11,18 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animation.css">
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script type="text/javascript">
-        function sendEmail() {
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "abhifloyer@gmail.com",
-                Password: "nahimilegatujhe",
-                To: "abhifloyer@gmail.com",
-                From: "abhifloyer@gmail.com",
-                Subject: "hello",
-                Body: "Hello",
-            }).then((message) => alert("mail sent successfully"));
-        }
+    <script type="text/javascript" src="js/index.js">
     </script>
 </head>
 
@@ -114,7 +103,12 @@
             <div class="socialmedia" id="mail">
                 <div class="fillcontact" id="fillmail"> <br>
                     <form method="post">
-                        <input type="button" value="Send Mail" onclick="sendEmail()" />
+                        <input type="email" class="in" placeholder="Enter your Email address" id="s_email"> <br>
+                        <input type="text" class="in" placeholder="Enter the subject of the email" id="s_subject"> <br>
+                        <textarea placeholder="Enter the body of the email here" class="in"
+                            value="Enter the body of the email" id="s_body"></textarea> <br> <br> <br>
+                        <input style="margin-left: 10em; width: 10em; height: 4em; border-radius: 5px;" type="button"
+                            value="Send Mail" onclick="sendEmail()" class="btnsend" />
                     </form>
                 </div>
                 <img src="image/gmail-logo.png" alt="">

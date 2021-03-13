@@ -303,11 +303,24 @@ body{
     opacity: 0;
 }
 #mail:hover #fillmail{
-    bottom: -6em;
+    bottom: -8em;
     z-index: 100;
     overflow: hidden;
     transition: 0.5s;
     width: 25em;
     height: 20em;
     opacity: 1;
+}
+.in{
+    width: 20em;
+    height: 2em;
+    margin-top: 1em;
+    margin-left: 15% ;
+    border-radius: 5px;
+} 
+/* #s_body{
+    height: ;
+} */ 
+.btnsend:hover{
+    background-color: chartreuse;
 }
