@@ -282,9 +282,13 @@ body{
     color: aliceblue;
     
 }
-.socialmedia:hover .fillcontact{
-    /* animation:  contact-barfill-black 0.5s forwards; */
-    /* animation: full-barfill 0.5s forwards; */
+.socialmedia:hover #filllinkedin{
+    /* animation:   full-barfill 0.5s forwards; */
+    animation: full-barfill 0.5s forwards;
+}
+.socialmedia:hover #fillgithub{
+    /* animation:   full-barfill 0.5s forwards; */
+    animation: full-barfill 0.5s forwards;
 }
 .socialmedia:hover h1{
     animation:  handle-color-change 0.5s forwards;
@@ -323,4 +327,9 @@ body{
 } */ 
 .btnsend:hover{
     background-color: chartreuse;
+}
+#mail{
+    /* margin-top: 1em; */
+    /* position: absolute; */
+    top: 0.9em;
 }
