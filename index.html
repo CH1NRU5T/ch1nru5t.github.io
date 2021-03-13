@@ -11,7 +11,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animation.css">
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="js/index.js"></script>
+    <script type="text/javascript">
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "abhifloyer@gmail.com",
+                Password: "nahimilegatujhe",
+                To: "abhifloyer@gmail.com",
+                From: "abhifloyer@gmail.com",
+                Subject: "hello",
+                Body: "Hello",
+            }).then((message) => alert("mail sent successfully"));
+        }
+    </script>
 </head>
 
 <body>
@@ -41,42 +53,57 @@
                 <div id="outerfade-gamedev" class="outerfade"></div> <br> <br>
                 <h2 style="text-align: center;">Cube Dash Game</h2>
                 <div style="border-radius: 10px;" class="pbarcube">
-                    <div style="border-radius: 10px;" class="fillcube"></div>
+                    <div style="border-radius: 10px;" class="fillcube">
+                        <h2 style="margin: 1em 30%; display: inline; color: black;">40%</h2>
+                    </div>
                 </div> <br>
                 <a href="game/index.html" target="_blank"
                     style="margin: 0em 4.34em; font-size: 2em;  color: black;">Play here</a>
             </div>
 
-            <div style="border:1px solid black;" class="skill" id="skill2">
+            <div style="border:1px solid black; margin-left: 28.6%;" class="skill" id="skill2">
                 <h1 class="sk" style="margin:5.7em 2.26em;">Web Development</h1>
                 <div id="outerfade-webdev" class="outerfade"></div>
                 <h2 style="text-align: center; margin-top: -0.3em;">HTML</h2>
                 <div class="htmlbar" style="border-radius: 5px;">
-                    <div class="fillhtml"></div>
+                    <div class="fillhtml">
+                        <h2 style="margin: 1em 40%; display: inline; color: black;">90%</h2>
+                    </div>
                 </div> <br>
                 <h2 style="text-align: center; margin-top: 0.1em;">CSS</h2>
                 <div class="cssbar" style="border-radius: 5px;">
-                    <div class="fillcss"></div>
+                    <div class="fillcss">
+                        <h2 style="margin: 1em 37%; display: inline; color: black;">60%</h2>
+                    </div>
+
                 </div> <br>
                 <h2 style="text-align: center; margin-top: 0.1em;">JavaScript</h2>
                 <div class="jsbar" style="border-radius: 5px;">
-                    <div class="filljs"></div>
+                    <div class="filljs">
+                        <h2 style="margin: 1em 20%; display: inline; color: black;">25%</h2>
+                    </div>
                 </div>
             </div>
-            <div style="border:1px solid black;" class="skill" id="skill3">
+            <div style="border:1px solid black; margin-left: 57%;" class="skill" id="skill3">
                 <h1 class="sk" style="margin:5.7em 3.2em;">Programming</h1>
                 <div id="outerfade-programming" class="outerfade"></div>
                 <h2 style="text-align: center; margin-top: -0.3em;">C</h2>
                 <div class="cbar" style="border-radius: 5px;">
-                    <div class="fillc"></div>
+                    <div class="fillc">
+                        <h2 style="margin: 1em 42%; display: inline; color: black;">95%</h2>
+                    </div>
                 </div> <br>
                 <h2 style="text-align: center; margin-top: 0.1em;">C++</h2>
                 <div class="cppbar" style="border-radius: 5px;">
-                    <div class="fillcpp"></div>
+                    <div class="fillcpp">
+                        <h2 style="margin: 1em 21%; display: inline; color: black;">30%</h2>
+                    </div>
                 </div> <br>
                 <h2 style="text-align: center; margin-top: 0.1em;">JAVA</h2>
                 <div class="javabar" style="border-radius: 5px;">
-                    <div class="filljava"></div>
+                    <div class="filljava">
+                        <h2 style="margin: 1em 22%; display: inline; color: black;">35%</h2>
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,8 +113,8 @@
 
             <div class="socialmedia" id="mail">
                 <div class="fillcontact" id="fillmail"> <br>
-                    <form method="POST">
-                        <input type="button" value="Send Mail" onclick="sendEmail()">
+                    <form method="post">
+                        <input type="button" value="Send Mail" onclick="sendEmail()" />
                     </form>
                 </div>
                 <img src="image/gmail-logo.png" alt="">

@@ -58,12 +58,12 @@
         width: 60%;
     }
 }
-@keyframes barfill-5{
+@keyframes barfill-25{
     from{
         width: 0%;
     }
     to{
-        width: 5%;
+        width: 25%;
     }
 }
 @keyframes barfill-95{
