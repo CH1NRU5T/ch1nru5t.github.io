@@ -347,7 +347,7 @@ visibility: visible;
 #s_body{
     height: 5em;
 }
-@media only screen and (max-width:360px){
+@media only screen and (max-width:300px){
     .skill{
         margin: 0em 20em;
     }
