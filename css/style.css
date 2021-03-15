@@ -91,7 +91,7 @@ body{
     /* background-color: rgba(255, 127, 80, 0.342); */
     background-color: rgba(188, 58, 192, 0.904);
     border-radius: 50%;
-    display: inline-block;
+    display: inline;
     overflow: hidden;
     margin: 0em 0.5em;
     position: absolute;
