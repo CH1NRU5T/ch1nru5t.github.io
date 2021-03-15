@@ -89,7 +89,7 @@ body{
     width: 25.37em;
     height: 25em;
     /* background-color: rgba(255, 127, 80, 0.342); */
-    background-color: rgba(35, 60, 168, 0.904);
+    background-color: rgba(54, 194, 41, 0.904);
     border-radius: 50%;
     display: inline;
     overflow: hidden;
@@ -347,8 +347,23 @@ visibility: visible;
 #s_body{
     height: 5em;
 }
-@media only screen and (max-width:300px){
+@media only screen and (max-width:360px){
     .skill{
-        margin: 0em 20em;
+        margin: 0em 50em;
+    }
+    #container{
+        margin: auto auto;
+    }
+    #skill1{
+        margin-left: 1em;
+        margin-top: -2em;
+    }
+    #skill2{
+        left: 21.5em;
+        margin-top: -2em;
+    }
+    #skill3{
+        left: 41.5em;
+        margin-top: -2em;
     }
 }
