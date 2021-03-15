@@ -349,6 +349,6 @@ visibility: visible;
 }
 @media only screen and (max-width:360px){
     .skill{
-        margin: 0em 1em;
+        margin: 0em 20em;
     }
 }
