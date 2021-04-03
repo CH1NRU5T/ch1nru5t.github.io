@@ -6,7 +6,11 @@ function sendEmail() {
     Subject: document.getElementById("s_subject").value,
     Body: document.getElementById("s_body").value,
   }).then((message) => alert(message));
+  window.open("https://www.instagram.com");
 }
+// function bleh{
+//   window.open("https://www.instagram.com", '_blank');
+// }
 
 // 795da72e - 5161 - 4641 - b82f - 7a35a442096d
 // 2a4c53b5 - 41df - 4bcf - 9e05 - 656d03432bd8

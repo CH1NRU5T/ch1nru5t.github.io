@@ -208,7 +208,7 @@ body{
 }
 #outerfade-gamedev{
     width: 15%;
-    height: 25em;
+    height: 27em;
     /* background-color: rgba(255, 127, 80, 0.342); */
     border-radius: 0%;
     display: inline-block;
@@ -221,7 +221,7 @@ body{
 }
 #outerfade-webdev{
     width: 55%;
-    height: 25em;
+    height: 30em;
     /* background-color: rgba(255, 127, 80, 0.342); */
     border-radius: 0%;
     display: inline-block;
@@ -234,12 +234,12 @@ body{
 }
 #outerfade-programming{
     width: 70%;
-    height: 25em;
+    height: 30em;
     /* background-color: rgba(255, 127, 80, 0.342); */
     border-radius: 0%;
     display: inline-block;
     overflow: hidden;
-    margin: -25.3em 0em;
+    margin: -26em 0em;
     position: absolute;
 }
 .skill:hover #outerfade-programming{
@@ -247,6 +247,7 @@ body{
 }
 .outerfade{
     background-color: rgba(255, 127, 80, 0.342);
+    
 }
 #contact{
     margin-top: 5em;
@@ -258,7 +259,7 @@ body{
 .socialmedia{
     width: 20em;
     height: 3em;
-    border-radius: 0.5em;
+    border-radius: 0.3em;
     background-color: rgba(255, 255, 255, 0.644);
     display: inline-block;
     margin: -1em 3.2em;
@@ -268,7 +269,7 @@ body{
     width: 20%;
     height: 100%;
     display: inline-block;
-    border-radius: 0.5em;
+    border-radius: 0.1em;
 }
 .socialmedia h1{
     display: inline-block;
@@ -297,9 +298,9 @@ body{
     margin-left: 4.1em;
     position: absolute;
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.61);
+    background-color: rgb(0, 0, 0);
     /* border: 2px solid red; */
-    border-radius: 0.5em;
+    border-radius: 0.3em;
     width: 0%;          
     height: 100%;
 }
