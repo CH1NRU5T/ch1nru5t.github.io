@@ -1,0 +1,132 @@
+@keyframes navunderline{
+    from{opacity: 0.4;}
+    to{opacity: 1;}
+}
+@keyframes popbox{
+    from{
+        height: 25em;
+        border-radius: 50%;
+        }
+    
+    to{
+        height: 34em;
+        border-radius: 5%;
+    }
+}
+@keyframes popbox1{
+    from{
+        height: 25em;
+        opacity: 0;
+        }
+    
+    to{
+        height: 50em;
+        opacity: 0;
+    }
+}
+@keyframes bleh{
+    from{
+        margin-top: 5.7em;
+        margin-bottom: 5.7em;
+    }
+    to{
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+}
+@keyframes barfill-40{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 40%;
+    }
+}
+@keyframes barfill-90{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 90%;
+    }
+}
+@keyframes barfill-60{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 60%;
+    }
+}
+@keyframes barfill-25{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 25%;
+    }
+}
+@keyframes barfill-95{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 95%;
+    }
+}
+@keyframes barfill-30{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 30%;
+    }
+}
+@keyframes barfill-35{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 35%;
+    }
+}
+@keyframes contactzoom{
+    from{
+        width: 20em;
+        height: 3em;
+    }
+    to{
+        width: 20.2em;
+        height: 3.5em;
+    }
+}
+@keyframes handle-down{
+    from{margin-top: 0.15em}
+    to{margin-top: 0.3em;}
+}
+@keyframes contact-barfill-black{
+    from{
+        background-color: rgba(255, 255, 255, 0.644);
+    /* color: black; */
+}
+    to{
+        background-color: black;
+        /* color: rgba(255, 255, 255, 0.644); */
+    }
+}
+@keyframes handle-color-change{
+    from{
+        color: black;
+    }
+    to{
+        color: white;
+    }
+}
+@keyframes full-barfill{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 79.5%;
+    }
+}
