@@ -6,13 +6,8 @@ function sendEmail() {
     Subject: document.getElementById("s_subject").value,
     Body: document.getElementById("s_body").value,
   }).then((message) => alert(message));
-  window.open("https://www.instagram.com");
+  //window.open("https://www.instagram.com");
 }
 // function bleh{
 //   window.open("https://www.instagram.com", '_blank');
 // }
-
-// 795da72e - 5161 - 4641 - b82f - 7a35a442096d
-// 2a4c53b5 - 41df - 4bcf - 9e05 - 656d03432bd8
-// fa2e515c - 6c84 - 4c1c - b886 - 1bef7d190c66
-// 13b95cff-a579-4f75-bec8-e30a58fcaeec
