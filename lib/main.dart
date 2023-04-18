@@ -52,55 +52,72 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     log('called');
     return SafeArea(
-      child: Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-          useLegacyColorScheme: true,
-          type: BottomNavigationBarType.fixed,
-          unselectedLabelStyle: const TextStyle(color: Colors.white),
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'About'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.table_chart), label: 'Skills'),
-            BottomNavigationBarItem(icon: Icon(Icons.phone), label: 'Projects'),
-            BottomNavigationBarItem(icon: Icon(Icons.phone), label: 'Contact'),
-          ],
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: Constants.gradient(),
         ),
-        backgroundColor: Colors.black,
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text(widget.title),
-        ),
-        body: SizedBox(
-          width: double.infinity,
-          height: MediaQuery.of(context).size.height -
-              (kToolbarHeight +
-                  kBottomNavigationBarHeight +
-                  MediaQuery.of(context).padding.vertical),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Expanded(
-                child: Container(
-                  decoration: Constants.glassMorph(),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
-                      Text(
-                        'Ansh is ',
-                        style: TextStyle(fontSize: 30),
-                      ),
-                      TypewriterText(texts: [
-                        'Flutter Developer',
-                        'NodeJS Developer',
-                        'Firebase'
-                      ]),
-                    ],
+        child: Scaffold(
+          bottomNavigationBar: BottomNavigationBar(
+            elevation: 0,
+            // fixedColor: Colors.transparent,
+            useLegacyColorScheme: true,
+            type: BottomNavigationBarType.fixed,
+            backgroundColor: Colors.transparent,
+            unselectedLabelStyle: const TextStyle(color: Colors.white),
+            items: const [
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'About'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.table_chart), label: 'Skills'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.phone), label: 'Projects'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.phone), label: 'Contact'),
+            ],
+          ),
+          backgroundColor: Colors.transparent,
+          // appBar: AppBar(
+          //   title: Text(widget.title),
+          //   elevation: 5,
+          //   backgroundColor: Colors.transparent,
+          //   centerTitle: true,
+          // ),
+          body: Container(
+            decoration: BoxDecoration(
+              gradient: Constants.gradient(),
+            ),
+            width: double.infinity,
+            height: MediaQuery.of(context).size.height -
+                (
+                    // kToolbarHeight +
+                    kBottomNavigationBarHeight +
+                        MediaQuery.of(context).padding.vertical),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(
+                        vertical: 30, horizontal: 35),
+                    decoration: Constants.glassMorph(),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: const [
+                        Text(
+                          'Ansh is ',
+                          style: TextStyle(fontSize: 30),
+                        ),
+                        TypewriterText(texts: [
+                          'Flutter Developer',
+                          'Backend Developer',
+                        ]),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
