@@ -154,10 +154,12 @@ class _MyHomePageState extends State<MyHomePage> {
                                 children: [
                                   CustomButton(
                                     text: 'Hire Me',
-                                    backgroundColor: Colors.blue,
+                                    backgroundColor:
+                                        const Color.fromARGB(255, 12, 112, 195),
                                     onPressed: () {},
                                     textColor: Colors.white,
                                   ),
+                                  const SizedBox(width: 20),
                                   CustomButton(
                                     text: 'See my works',
                                     backgroundColor: Colors.transparent,
