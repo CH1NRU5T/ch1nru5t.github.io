@@ -1,10 +1,13 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/constants/constant.dart';
-import 'package:portfolio/features/TypeWriter/widgets/typewriter_text.dart';
+import 'package:portfolio/constants/custom_button.dart';
 import 'package:portfolio/providers/type_writer.dart';
 import 'package:provider/provider.dart';
+
+import 'features/TypeWriter/widgets/typewriter_text.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,12 +42,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-  //   });
-  // }
+  @override
+  void initState() {
+    super.initState();
+  }
 
   List<String> list = ['Flutter Developer', 'Backend Developer'];
   int index = 0;
@@ -57,17 +58,24 @@ class _MyHomePageState extends State<MyHomePage> {
           gradient: Constants.gradient(),
         ),
         child: Scaffold(
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {},
+            child: const Icon(Icons.home_outlined),
+          ),
           bottomNavigationBar: BottomNavigationBar(
             elevation: 0,
             // fixedColor: Colors.transparent,
             useLegacyColorScheme: true,
+
             type: BottomNavigationBarType.fixed,
-            backgroundColor: Colors.transparent,
+            // backgroundColor: Colors.transparent,
             unselectedLabelStyle: const TextStyle(color: Colors.white),
             items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'About'),
+              // BottomNavigationBarItem(icon: Icon(Icons.home), label: 'About'),
               BottomNavigationBarItem(
                   icon: Icon(Icons.table_chart), label: 'Skills'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.table_chart), label: 'Experience'),
               BottomNavigationBarItem(
                   icon: Icon(Icons.phone), label: 'Projects'),
               BottomNavigationBarItem(
@@ -75,22 +83,14 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
           backgroundColor: Colors.transparent,
-          // appBar: AppBar(
-          //   title: Text(widget.title),
-          //   elevation: 5,
-          //   backgroundColor: Colors.transparent,
-          //   centerTitle: true,
-          // ),
           body: Container(
             decoration: BoxDecoration(
               gradient: Constants.gradient(),
             ),
             width: double.infinity,
             height: MediaQuery.of(context).size.height -
-                (
-                    // kToolbarHeight +
-                    kBottomNavigationBarHeight +
-                        MediaQuery.of(context).padding.vertical),
+                (kBottomNavigationBarHeight +
+                    MediaQuery.of(context).padding.vertical),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -103,15 +103,74 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: const [
-                        Text(
-                          'Ansh is ',
-                          style: TextStyle(fontSize: 30),
+                      children: [
+                        // Text(
+                        //   'Ansh is ',
+                        //   style: TextStyle(fontSize: 30),
+                        // ),
+                        // TypewriterText(texts: [
+                        //   'Flutter Developer',
+                        //   'Backend Developer',
+                        // ]),
+                        Expanded(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Hello,',
+                                style: TextStyle(
+                                    fontSize: 40, color: Colors.grey.shade800),
+                              ),
+                              RichText(
+                                text: TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: 'This is ',
+                                      style: TextStyle(
+                                          fontSize: 40,
+                                          color: Colors.grey.shade800),
+                                    ),
+                                    TextSpan(
+                                      text: 'Ansh Agrawal',
+                                      style: TextStyle(
+                                          color: Colors.grey.shade800,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 40),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              TypewriterText(
+                                  color: Colors.grey.shade800,
+                                  texts: const [
+                                    'Flutter Developer',
+                                    'Backend Developer',
+                                  ]),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  CustomButton(
+                                    text: 'Hire Me',
+                                    backgroundColor: Colors.blue,
+                                    onPressed: () {},
+                                    textColor: Colors.white,
+                                  ),
+                                  CustomButton(
+                                    text: 'See my works',
+                                    backgroundColor: Colors.transparent,
+                                    onPressed: () {},
+                                    textColor: Colors.grey.shade800,
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
                         ),
-                        TypewriterText(texts: [
-                          'Flutter Developer',
-                          'Backend Developer',
-                        ]),
+                        Expanded(
+                            child: SvgPicture.asset('assets/images/home.svg')),
                       ],
                     ),
                   ),

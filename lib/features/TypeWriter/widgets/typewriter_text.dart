@@ -4,8 +4,9 @@ import 'package:portfolio/providers/type_writer.dart';
 import 'package:provider/provider.dart';
 
 class TypewriterText extends StatefulWidget {
-  const TypewriterText({super.key, required this.texts});
+  const TypewriterText({super.key, required this.texts, this.color});
   final List<String> texts;
+  final Color? color;
   @override
   State<TypewriterText> createState() => _TypewriterTextState();
 }
@@ -27,7 +28,7 @@ class _TypewriterTextState extends State<TypewriterText> {
       builder: (context, value, child) {
         return Text(
           value.text,
-          style: const TextStyle(fontSize: 30),
+          style: TextStyle(fontSize: 30, color: widget.color ?? Colors.white),
         );
       },
     );
