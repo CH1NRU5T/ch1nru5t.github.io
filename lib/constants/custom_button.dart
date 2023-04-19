@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/constants/custom_textstyle.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton(
@@ -24,10 +25,7 @@ class CustomButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
         backgroundColor: backgroundColor,
       ),
-      child: Text(
-        text,
-        style: TextStyle(color: textColor),
-      ),
+      child: Text(text, style: getCustomTextStyle(color: textColor, size: 20)),
     );
   }
 }

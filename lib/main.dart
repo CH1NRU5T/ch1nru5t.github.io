@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/constants/constant.dart';
 import 'package:portfolio/constants/custom_button.dart';
+import 'package:portfolio/constants/custom_textstyle.dart';
 import 'package:portfolio/providers/type_writer.dart';
 import 'package:provider/provider.dart';
 
@@ -19,16 +20,65 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => TypeWriter()),
-      ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData.dark(useMaterial3: true),
-        home: const MyHomePage(title: 'Welcome to my Portfolio'),
-      ),
-    );
+        providers: [
+          ChangeNotifierProvider(create: (_) => TypeWriter()),
+        ],
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData.dark(useMaterial3: true).copyWith(
+            textTheme: const TextTheme(
+                bodyLarge: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                bodyMedium: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                displayLarge: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                displayMedium: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                displaySmall: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                headlineMedium: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                headlineSmall: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                titleLarge: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                titleMedium: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                titleSmall: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                bodySmall: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                labelSmall: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                )),
+          ),
+          home: const MyHomePage(title: 'Welcome to my Portfolio'),
+        ));
   }
 }
 
@@ -54,8 +104,12 @@ class _MyHomePageState extends State<MyHomePage> {
     log('called');
     return SafeArea(
       child: Container(
-        decoration: BoxDecoration(
-          gradient: Constants.gradient(),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/bg.jpeg'),
+            fit: BoxFit.cover,
+          ),
+          // gradient: Constants.gradient(),
         ),
         child: Scaffold(
           floatingActionButton: FloatingActionButton(
@@ -84,8 +138,12 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           backgroundColor: Colors.transparent,
           body: Container(
-            decoration: BoxDecoration(
-              gradient: Constants.gradient(),
+            decoration: const BoxDecoration(
+              // gradient: Constants.gradient(),
+              image: DecorationImage(
+                image: AssetImage('assets/images/bg.webp'),
+                fit: BoxFit.cover,
+              ),
             ),
             width: double.infinity,
             height: MediaQuery.of(context).size.height -
@@ -118,34 +176,39 @@ class _MyHomePageState extends State<MyHomePage> {
                             children: [
                               Text(
                                 'Hello,',
-                                style: TextStyle(
-                                    fontSize: 40, color: Colors.grey.shade800),
+                                style: getCustomTextStyle(
+                                    size: 40, color: Colors.grey.shade800),
+                                // style: GoogleFonts.openSans(
+                                //     fontSize: 40, color: Colors.grey.shade800),
                               ),
+                              const SizedBox(height: 10),
                               RichText(
                                 text: TextSpan(
                                   children: [
                                     TextSpan(
                                       text: 'This is ',
-                                      style: TextStyle(
-                                          fontSize: 40,
+                                      style: getCustomTextStyle(
+                                          size: 40,
                                           color: Colors.grey.shade800),
                                     ),
                                     TextSpan(
                                       text: 'Ansh Agrawal',
-                                      style: TextStyle(
+                                      style: getCustomTextStyle(
+                                          size: 40,
                                           color: Colors.grey.shade800,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 40),
+                                          weight: FontWeight.bold),
                                     ),
                                   ],
                                 ),
                               ),
+                              const SizedBox(height: 10),
                               TypewriterText(
                                   color: Colors.grey.shade800,
                                   texts: const [
                                     'Flutter Developer',
                                     'Backend Developer',
                                   ]),
+                              const SizedBox(height: 10),
                               const SizedBox(
                                 height: 20,
                               ),

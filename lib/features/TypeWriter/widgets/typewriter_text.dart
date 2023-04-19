@@ -3,6 +3,8 @@ import 'package:portfolio/features/TypeWriter/services/typewriter_services.dart'
 import 'package:portfolio/providers/type_writer.dart';
 import 'package:provider/provider.dart';
 
+import '../../../constants/custom_textstyle.dart';
+
 class TypewriterText extends StatefulWidget {
   const TypewriterText({super.key, required this.texts, this.color});
   final List<String> texts;
@@ -28,7 +30,10 @@ class _TypewriterTextState extends State<TypewriterText> {
       builder: (context, value, child) {
         return Text(
           value.text,
-          style: TextStyle(fontSize: 30, color: widget.color ?? Colors.white),
+          style: getCustomTextStyle(
+            size: 40,
+            color: widget.color ?? Colors.white,
+          ),
         );
       },
     );
