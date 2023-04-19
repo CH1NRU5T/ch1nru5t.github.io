@@ -105,12 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return SafeArea(
       child: Container(
         decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bg.jpeg'),
-            fit: BoxFit.cover,
-          ),
-          // gradient: Constants.gradient(),
-        ),
+            // gradient: Constants.gradient(),
+            ),
         child: Scaffold(
           floatingActionButton: FloatingActionButton(
             onPressed: () {},
