@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constant.dart';
+import 'package:portfolio/constants/custom_textstyle.dart';
 import 'package:portfolio/features/home/screens/home_screen.dart';
 import 'package:portfolio/providers/type_writer.dart';
 import 'package:provider/provider.dart';
@@ -20,57 +21,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
-          theme: ThemeData.dark(useMaterial3: true).copyWith(
-            textTheme: const TextTheme(
-                bodyLarge: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-                bodyMedium: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-                displayLarge: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-                displayMedium: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-                displaySmall: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-                headlineMedium: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-                headlineSmall: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-                titleLarge: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-                titleMedium: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-                titleSmall: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-                bodySmall: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-                labelSmall: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                )),
-          ),
+          theme: ThemeData.dark(useMaterial3: true).copyWith(),
           home: const MyHomePage(title: 'Welcome to my Portfolio'),
         ));
   }
@@ -93,22 +44,35 @@ class _MyHomePageState extends State<MyHomePage> {
 
   List<String> list = ['Flutter Developer', 'Backend Developer'];
   int index = 0;
+  void setIndex(int index) {
+    setState(() {
+      this.index = index;
+    });
+  }
+
+  List<Widget> pages = [
+    const HomeScreen(),
+    const Center(child: Text('Skills')),
+    const Center(child: Text('Experience')),
+    const Center(child: Text('Projects')),
+    const Center(child: Text('Contact')),
+  ];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
         decoration: const BoxDecoration(),
         child: Scaffold(
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {},
-            child: const Icon(Icons.home_outlined),
-          ),
           bottomNavigationBar: BottomNavigationBar(
+            currentIndex: index,
+            onTap: setIndex,
             elevation: 0,
             useLegacyColorScheme: true,
             type: BottomNavigationBarType.fixed,
             unselectedLabelStyle: const TextStyle(color: Colors.white),
             items: const [
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.home_outlined), label: 'About'),
               BottomNavigationBarItem(
                   icon: Icon(Icons.table_chart), label: 'Skills'),
               BottomNavigationBarItem(
@@ -134,7 +98,21 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Container(
               margin: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
               decoration: Constants.glassMorph(),
-              child: const HomeScreen(),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Expanded(child: pages[index]),
+                  Container(
+                    margin: const EdgeInsets.only(right: 8, bottom: 5),
+                    child: Text('Made by Ansh Agrawal, with ❤️ and Flutter',
+                        style: getCustomTextStyle(
+                          weight: FontWeight.w600,
+                          color: Colors.grey.shade800,
+                          size: 15,
+                        )),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

@@ -9,7 +9,7 @@ class TypeWriterServices {
       required int index,
       required BuildContext context}) async {
     while (true) {
-      await Future.delayed(const Duration(seconds: 3));
+      await Future.delayed(const Duration(milliseconds: 2650));
       Provider.of<TypeWriter>(context, listen: false)
           .changeText(list[++index % list.length]);
     }
