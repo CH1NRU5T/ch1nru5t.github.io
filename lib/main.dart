@@ -1,14 +1,8 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/constants/constant.dart';
-import 'package:portfolio/constants/custom_button.dart';
-import 'package:portfolio/constants/custom_textstyle.dart';
+import 'package:portfolio/features/home/screens/home_screen.dart';
 import 'package:portfolio/providers/type_writer.dart';
 import 'package:provider/provider.dart';
-
-import 'features/TypeWriter/widgets/typewriter_text.dart';
 
 void main() {
   runApp(const MyApp());
@@ -101,12 +95,9 @@ class _MyHomePageState extends State<MyHomePage> {
   int index = 0;
   @override
   Widget build(BuildContext context) {
-    log('called');
     return SafeArea(
       child: Container(
-        decoration: const BoxDecoration(
-            // gradient: Constants.gradient(),
-            ),
+        decoration: const BoxDecoration(),
         child: Scaffold(
           floatingActionButton: FloatingActionButton(
             onPressed: () {},
@@ -114,14 +105,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           bottomNavigationBar: BottomNavigationBar(
             elevation: 0,
-            // fixedColor: Colors.transparent,
             useLegacyColorScheme: true,
-
             type: BottomNavigationBarType.fixed,
-            // backgroundColor: Colors.transparent,
             unselectedLabelStyle: const TextStyle(color: Colors.white),
             items: const [
-              // BottomNavigationBarItem(icon: Icon(Icons.home), label: 'About'),
               BottomNavigationBarItem(
                   icon: Icon(Icons.table_chart), label: 'Skills'),
               BottomNavigationBarItem(
@@ -135,7 +122,6 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Colors.transparent,
           body: Container(
             decoration: const BoxDecoration(
-              // gradient: Constants.gradient(),
               image: DecorationImage(
                 image: AssetImage('assets/images/bg.webp'),
                 fit: BoxFit.cover,
@@ -145,98 +131,10 @@ class _MyHomePageState extends State<MyHomePage> {
             height: MediaQuery.of(context).size.height -
                 (kBottomNavigationBarHeight +
                     MediaQuery.of(context).padding.vertical),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.symmetric(
-                        vertical: 30, horizontal: 35),
-                    decoration: Constants.glassMorph(),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        // Text(
-                        //   'Ansh is ',
-                        //   style: TextStyle(fontSize: 30),
-                        // ),
-                        // TypewriterText(texts: [
-                        //   'Flutter Developer',
-                        //   'Backend Developer',
-                        // ]),
-                        Expanded(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Hello,',
-                                style: getCustomTextStyle(
-                                    size: 40, color: Colors.grey.shade800),
-                                // style: GoogleFonts.openSans(
-                                //     fontSize: 40, color: Colors.grey.shade800),
-                              ),
-                              const SizedBox(height: 10),
-                              RichText(
-                                text: TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: 'This is ',
-                                      style: getCustomTextStyle(
-                                          size: 40,
-                                          color: Colors.grey.shade800),
-                                    ),
-                                    TextSpan(
-                                      text: 'Ansh Agrawal',
-                                      style: getCustomTextStyle(
-                                          size: 40,
-                                          color: Colors.grey.shade800,
-                                          weight: FontWeight.bold),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 10),
-                              TypewriterText(
-                                  color: Colors.grey.shade800,
-                                  texts: const [
-                                    'Flutter Developer',
-                                    'Backend Developer',
-                                  ]),
-                              const SizedBox(height: 10),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  CustomButton(
-                                    text: 'Hire Me',
-                                    backgroundColor:
-                                        const Color.fromARGB(255, 12, 112, 195),
-                                    onPressed: () {},
-                                    textColor: Colors.white,
-                                  ),
-                                  const SizedBox(width: 20),
-                                  CustomButton(
-                                    text: 'See my works',
-                                    backgroundColor: Colors.transparent,
-                                    onPressed: () {},
-                                    textColor: Colors.grey.shade800,
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                        Expanded(
-                            child: SvgPicture.asset('assets/images/home.svg')),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
+            child: Container(
+              margin: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+              decoration: Constants.glassMorph(),
+              child: const HomeScreen(),
             ),
           ),
         ),

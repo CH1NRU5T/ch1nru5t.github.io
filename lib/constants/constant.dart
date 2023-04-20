@@ -1,6 +1,21 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class Constants {
+  static double getTextSizeFromDevice() {
+    return defaultTargetPlatform == TargetPlatform.iOS ||
+            defaultTargetPlatform == TargetPlatform.android
+        ? 25
+        : 40;
+  }
+
+  static double getTextButtonSizeFromDevice() {
+    return defaultTargetPlatform == TargetPlatform.iOS ||
+            defaultTargetPlatform == TargetPlatform.android
+        ? 15
+        : 20;
+  }
+
   static BoxDecoration glassMorph() {
     return BoxDecoration(
         boxShadow: [
