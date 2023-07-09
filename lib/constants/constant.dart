@@ -31,6 +31,8 @@ class Constants {
         color: Colors.white.withOpacity(0.3));
   }
 
+  static String imagesPath = 'assets/images/';
+
   static LinearGradient gradient() {
     return const LinearGradient(
         begin: Alignment.topLeft,

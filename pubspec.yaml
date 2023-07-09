@@ -32,6 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: null
+  font_awesome_flutter: ^10.5.0
   google_fonts: ^4.0.3
   peanut: ^4.3.1
   provider: ^6.0.5
