@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constant.dart';
 import 'package:portfolio/constants/custom_textstyle.dart';
 import 'package:portfolio/features/home/screens/home_screen.dart';
+import 'package:portfolio/features/skills/screens/skills_screen.dart';
 import 'package:portfolio/providers/type_writer.dart';
 import 'package:provider/provider.dart';
 
@@ -42,7 +43,6 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
   }
 
-  List<String> list = ['Flutter Developer', 'Backend Developer'];
   int index = 0;
   void setIndex(int index) {
     setState(() {
@@ -51,8 +51,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   List<Widget> pages = [
-    const HomeScreen(),
-    const Center(child: Text('Skills')),
+    const HomeScreen(
+      typewriterList: [
+        'Flutter Developer',
+        'Backend Developer',
+        'Video Editor'
+      ],
+    ),
+    const SkillsScreen(),
     const Center(child: Text('Experience')),
     const Center(child: Text('Projects')),
     const Center(child: Text('Contact')),

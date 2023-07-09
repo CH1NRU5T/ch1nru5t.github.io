@@ -8,8 +8,8 @@ import '../../../constants/custom_textstyle.dart';
 import '../../TypeWriter/widgets/typewriter_text.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
+  const HomeScreen({super.key, required this.typewriterList});
+  final List<String> typewriterList;
   @override
   Widget build(BuildContext context) {
     return Flex(
@@ -51,10 +51,8 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              TypewriterText(color: Colors.grey.shade800, texts: const [
-                'Flutter Developer',
-                'Backend Developer',
-              ]),
+              TypewriterText(
+                  color: Colors.grey.shade800, texts: typewriterList),
               const SizedBox(height: 10),
               const SizedBox(
                 height: 20,
@@ -82,7 +80,7 @@ class HomeScreen extends StatelessWidget {
         ),
         Expanded(
             child: SvgPicture.asset(
-          'assets/images/home.svg',
+          '${Constants.imagesPath}home.svg',
           height: MediaQuery.of(context).size.height * 0.48,
           width: MediaQuery.of(context).size.width * 0.48,
         )),
